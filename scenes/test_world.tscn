@@ -1,3 +1,135 @@
 [gd_scene format=3 uid="uid://rs7otf8g7cu2"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcg8s"]
+bg_color = Color(0.76855767, 0.8583775, 0.6104448, 1)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kyfjp"]
+size = Vector2(100, 1)
+
 [node name="Node2D" type="Node2D" unique_id=576725492]
+
+[node name="Control" type="CanvasLayer" parent="." unique_id=1293716659]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1954441410]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Navbar(Top)" type="PanelContainer" parent="Control/VBoxContainer" unique_id=147692508]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vcg8s")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer/Navbar(Top)" unique_id=332170126]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/Navbar(Top)/MarginContainer" unique_id=919893538]
+layout_mode = 2
+
+[node name="SpacerL" type="Control" parent="Control/VBoxContainer/Navbar(Top)/MarginContainer/HBoxContainer" unique_id=1088414376]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/VBoxContainer/Navbar(Top)/MarginContainer/HBoxContainer" unique_id=896977724]
+layout_mode = 2
+texture_normal = SubResource("PlaceholderTexture2D_kyfjp")
+stretch_mode = 6
+
+[node name="SpacerBetween" type="Control" parent="Control/VBoxContainer/Navbar(Top)/MarginContainer/HBoxContainer" unique_id=610244470]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/Navbar(Top)/MarginContainer/HBoxContainer" unique_id=818325407]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13185453, 0.24734041, 0, 1)
+text = "Money: $200"
+
+[node name="SpacerR" type="Control" parent="Control/VBoxContainer/Navbar(Top)/MarginContainer/HBoxContainer" unique_id=2068772758]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="GameScreen(Middle)" type="SubViewportContainer" parent="Control/VBoxContainer" unique_id=318128320]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Control/VBoxContainer/GameScreen(Middle)" unique_id=1764985290]
+size = Vector2i(720, 916)
+
+[node name="Actionbar(Top)" type="PanelContainer" parent="Control/VBoxContainer" unique_id=180461583]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vcg8s")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer/Actionbar(Top)" unique_id=637389193]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/Actionbar(Top)/MarginContainer" unique_id=53597593]
+layout_mode = 2
+alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Control/VBoxContainer/Actionbar(Top)/MarginContainer/HBoxContainer" unique_id=1897595586]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="SpacerL2" type="Control" parent="Control/VBoxContainer/Actionbar(Top)/MarginContainer/HBoxContainer" unique_id=122534788]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="Control/VBoxContainer/Actionbar(Top)/MarginContainer/HBoxContainer" unique_id=1355850553]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="SpacerL3" type="Control" parent="Control/VBoxContainer/Actionbar(Top)/MarginContainer/HBoxContainer" unique_id=1975872361]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="ColorRect3" type="ColorRect" parent="Control/VBoxContainer/Actionbar(Top)/MarginContainer/HBoxContainer" unique_id=417141776]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="SpacerL4" type="Control" parent="Control/VBoxContainer/Actionbar(Top)/MarginContainer/HBoxContainer" unique_id=2081551635]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="ColorRect4" type="ColorRect" parent="Control/VBoxContainer/Actionbar(Top)/MarginContainer/HBoxContainer" unique_id=1094661715]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="SpacerL5" type="Control" parent="Control/VBoxContainer/Actionbar(Top)/MarginContainer/HBoxContainer" unique_id=793139477]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="ColorRect5" type="ColorRect" parent="Control/VBoxContainer/Actionbar(Top)/MarginContainer/HBoxContainer" unique_id=295621549]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="SpacerL6" type="Control" parent="Control/VBoxContainer/Actionbar(Top)/MarginContainer/HBoxContainer" unique_id=1665297018]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="ColorRect6" type="ColorRect" parent="Control/VBoxContainer/Actionbar(Top)/MarginContainer/HBoxContainer" unique_id=833758109]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="SpacerL7" type="Control" parent="Control/VBoxContainer/Actionbar(Top)/MarginContainer/HBoxContainer" unique_id=1437908774]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="ColorRect7" type="ColorRect" parent="Control/VBoxContainer/Actionbar(Top)/MarginContainer/HBoxContainer" unique_id=230464075]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
