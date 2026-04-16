@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://rs7otf8g7cu2"]
 
+[ext_resource type="Script" uid="uid://bihdubdbns06i" path="res://scripts/money_counter.gd" id="1_kyfjp"]
+[ext_resource type="Script" uid="uid://u25aeiv20rn" path="res://scripts/GridManager.gd" id="2_amxg5"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcg8s"]
 bg_color = Color(0.76855767, 0.8583775, 0.6104448, 1)
 
@@ -52,6 +55,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.13185453, 0.24734041, 0, 1)
 text = "Money: $200"
+script = ExtResource("1_kyfjp")
 
 [node name="SpacerR" type="Control" parent="Control/VBoxContainer/Navbar(Top)/MarginContainer/HBoxContainer" unique_id=2068772758]
 custom_minimum_size = Vector2(8, 0)
@@ -64,7 +68,13 @@ size_flags_vertical = 3
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Control/VBoxContainer/GameScreen(Middle)" unique_id=1764985290]
+handle_input_locally = false
+physics_object_picking = true
 size = Vector2i(720, 916)
+render_target_update_mode = 4
+
+[node name="Node2D" type="Node2D" parent="Control/VBoxContainer/GameScreen(Middle)/SubViewport" unique_id=405156138]
+script = ExtResource("2_amxg5")
 
 [node name="Actionbar(Top)" type="PanelContainer" parent="Control/VBoxContainer" unique_id=180461583]
 custom_minimum_size = Vector2(0, 60)
